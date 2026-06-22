@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="AI assistant with voice preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset=".56" stop-color="#111827"/>
+      <stop offset="1" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" x2="1">
+      <stop offset="0" stop-color="#86efac"/>
+      <stop offset=".5" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <rect x="82" y="72" width="1036" height="531" rx="34" fill="#101010" fill-opacity=".84" stroke="#27272a"/>
+  <text x="132" y="150" fill="#f5f5f5" font-family="JetBrains Mono, monospace" font-size="24" font-weight="800">python main.py --voice</text>
+  <text x="132" y="222" fill="#f5f5f5" font-family="Space Grotesk, Arial" font-size="58" font-weight="800">AI Assistant with Voice</text>
+  <text x="132" y="266" fill="#a1a1aa" font-family="Inter, Arial" font-size="22">Wake phrase / speech recognition / text-to-speech / local actions</text>
+  <rect x="132" y="334" width="420" height="184" rx="24" fill="#0a0a0a" stroke="#27272a"/>
+  <text x="168" y="386" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="22">hey jarvis open spotify</text>
+  <text x="168" y="432" fill="#60a5fa" font-family="JetBrains Mono, monospace" font-size="22">as your command</text>
+  <text x="168" y="478" fill="#d4d4d8" font-family="JetBrains Mono, monospace" font-size="20">assistant.log saved locally</text>
+  <circle cx="838" cy="348" r="138" fill="#181818" stroke="#52525b" stroke-width="3"/>
+  <circle cx="838" cy="348" r="78" fill="#111111" stroke="url(#pulse)" stroke-width="8"/>
+  <path d="M730 348h34l20-58 36 116 34-154 38 96h54" fill="none" stroke="url(#pulse)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M776 528c24-50 62-78 108-78s84 28 108 78" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="10" stroke-linecap="round"/>
+</svg>

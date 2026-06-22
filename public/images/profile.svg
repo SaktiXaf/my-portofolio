@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Profile portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#232323"/>
+      <stop offset="1" stop-color="#080808"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="30%" r="58%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+      <stop offset=".55" stop-color="#8b5cf6" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#ffffff" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="720" height="720" fill="url(#bg)"/>
+  <rect width="720" height="720" fill="url(#grid)"/>
+  <circle cx="360" cy="280" r="280" fill="url(#halo)"/>
+  <circle cx="360" cy="268" r="104" fill="#d4d4d8"/>
+  <path d="M221 597c16-104 71-177 139-177s123 73 139 177" fill="#f5f5f5"/>
+  <path d="M235 598h250c-18-77-63-126-125-126s-107 49-125 126Z" fill="#a1a1aa"/>
+  <path d="M256 250c18-79 72-128 142-110 62 16 88 67 70 124-62-33-145-29-212-14Z" fill="#111111"/>
+  <path d="M250 345c38 55 139 61 197 0" fill="none" stroke="#111111" stroke-opacity=".6" stroke-width="14" stroke-linecap="round"/>
+  <text x="360" y="666" fill="#f5f5f5" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" text-anchor="middle">SAKTI MAXIMILLIAN</text>
+</svg>

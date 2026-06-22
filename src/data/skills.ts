@@ -1,0 +1,97 @@
+import { Blocks, Bug, Clock, Code2, Database, Gamepad2, GitBranch, Lightbulb, MessageCircle, RefreshCcw, Rocket, Users, Wand2 } from "lucide-react";
+import type { Skill } from "../types";
+
+export const skills: Skill[] = [
+  {
+    id: "responsive-web-design",
+    name: "Responsive Web Design",
+    category: "Technical",
+    description: "Membuat layout yang nyaman digunakan di desktop, tablet, dan mobile.",
+    icon: Blocks,
+  },
+  {
+    id: "rest-api",
+    name: "REST API Integration",
+    category: "Technical",
+    description: "Menghubungkan frontend dengan endpoint backend secara terstruktur.",
+    icon: Code2,
+  },
+  {
+    id: "database-design",
+    name: "Database Design",
+    category: "Technical",
+    description: "Merancang tabel dan relasi data dasar untuk aplikasi web.",
+    icon: Database,
+  },
+  {
+    id: "git-version-control",
+    name: "Git Version Control",
+    category: "Technical",
+    description: "Mengelola perubahan kode dengan branch, commit, dan repository.",
+    icon: GitBranch,
+  },
+  {
+    id: "ui-ux",
+    name: "Basic UI/UX Design",
+    category: "Technical",
+    description: "Menyusun tampilan yang bersih, konsisten, dan mudah dipahami.",
+    icon: Wand2,
+  },
+  {
+    id: "debugging",
+    name: "Debugging",
+    category: "Technical",
+    description: "Menelusuri penyebab error dan memperbaiki masalah secara sistematis.",
+    icon: Bug,
+  },
+  {
+    id: "deployment",
+    name: "Deployment",
+    category: "Technical",
+    description: "Menyiapkan aplikasi agar dapat diakses di lingkungan publik.",
+    icon: Rocket,
+  },
+  {
+    id: "problem-solving",
+    name: "Problem Solving",
+    category: "Soft Skill",
+    description: "Memecah masalah besar menjadi langkah kecil yang bisa dikerjakan.",
+    icon: Lightbulb,
+  },
+  {
+    id: "communication",
+    name: "Communication",
+    category: "Soft Skill",
+    description: "Menjelaskan ide, kendala, dan progres dengan jelas.",
+    icon: MessageCircle,
+  },
+  {
+    id: "teamwork",
+    name: "Teamwork",
+    category: "Soft Skill",
+    description: "Berkolaborasi dalam tim untuk mencapai tujuan bersama.",
+    icon: Users,
+  },
+  {
+    id: "time-management",
+    name: "Time Management",
+    category: "Soft Skill",
+    description: "Mengatur prioritas pekerjaan agar tetap tepat waktu.",
+    icon: Clock,
+  },
+  {
+    id: "continuous-learning",
+    name: "Continuous Learning",
+    category: "Soft Skill",
+    description: "Terus memperbarui kemampuan sesuai kebutuhan teknologi.",
+    icon: RefreshCcw,
+  },
+  {
+    id: "mobile-legends",
+    name: "Mobile Legends",
+    category: "Soft Skill",
+    description: "Ex Imo 401.",
+    icon: Gamepad2,
+    logo: "/images/tech/ml.jpg",
+  },
+];

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="GitHub repository projects preview">
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#181818"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#0a0a0a"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <rect x="82" y="70" width="1036" height="535" rx="32" fill="url(#panel)" stroke="#27272a"/>
+  <text x="132" y="140" fill="#f5f5f5" font-family="JetBrains Mono, monospace" font-size="24" font-weight="800">github.com/SaktiXaf</text>
+  <text x="132" y="210" fill="#f5f5f5" font-family="Space Grotesk, Arial" font-size="56" font-weight="800">Repository Projects</text>
+  <text x="132" y="252" fill="#a1a1aa" font-family="Inter, Arial" font-size="22">Python / PHP / TypeScript / SCSS / JavaScript</text>
+  <g font-family="Inter, Arial" font-size="22" font-weight="800">
+    <rect x="132" y="315" width="294" height="58" rx="18" fill="#111111" stroke="#52525b"/>
+    <circle cx="166" cy="344" r="8" fill="#86efac"/>
+    <text x="188" y="352" fill="#f5f5f5">ai-assistant-w-voice</text>
+    <rect x="454" y="315" width="220" height="58" rx="18" fill="#111111" stroke="#27272a"/>
+    <circle cx="488" cy="344" r="8" fill="#c4b5fd"/>
+    <text x="510" y="352" fill="#f5f5f5">apple-clone</text>
+    <rect x="702" y="315" width="166" height="58" rx="18" fill="#111111" stroke="#27272a"/>
+    <circle cx="736" cy="344" r="8" fill="#f5f5f5"/>
+    <text x="758" y="352" fill="#f5f5f5">Velora</text>
+    <rect x="132" y="397" width="216" height="58" rx="18" fill="#111111" stroke="#27272a"/>
+    <circle cx="166" cy="426" r="8" fill="#d4d4d8"/>
+    <text x="188" y="434" fill="#f5f5f5">Rental-mobil</text>
+    <rect x="376" y="397" width="178" height="58" rx="18" fill="#111111" stroke="#27272a"/>
+    <circle cx="410" cy="426" r="8" fill="#a7f3d0"/>
+    <text x="432" y="434" fill="#f5f5f5">Restoran</text>
+    <rect x="582" y="397" width="220" height="58" rx="18" fill="#111111" stroke="#27272a"/>
+    <circle cx="616" cy="426" r="8" fill="#fca5a5"/>
+    <text x="638" y="434" fill="#f5f5f5">Perpustakaan</text>
+    <rect x="132" y="498" width="244" height="52" rx="26" fill="#f5f5f5"/>
+    <text x="166" y="532" fill="#0a0a0a">View repositories</text>
+  </g>
+</svg>
