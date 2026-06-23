@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Layers3, Sparkles } from "lucide-react";
+import { ArrowUpRight, Code2, Layers3, ShoppingBag, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import { skills } from "../../data/skills";
@@ -23,6 +23,12 @@ const summary = [
     value: projects.filter((project) => project.status === "completed").length + skills.length,
     href: "/#portfolio-skills",
     icon: Sparkles,
+  },
+  {
+    label: "Order Packages",
+    value: 4,
+    href: "/#order",
+    icon: ShoppingBag,
   },
 ];
 
