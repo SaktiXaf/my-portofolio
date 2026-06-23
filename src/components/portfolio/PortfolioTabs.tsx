@@ -2,9 +2,9 @@ import { cx } from "../../lib/utils";
 
 export const portfolioTabs = [
   { label: "Projects", value: "projects" },
-  { label: "Certificates", value: "certificates" },
   { label: "Tech Stack", value: "tech-stack" },
-  { label: "Additional Skills", value: "skills" },
+  { label: "Skills", value: "skills" },
+  { label: "Certificates", value: "certificates" },
 ] as const;
 
 export type PortfolioTab = (typeof portfolioTabs)[number]["value"];

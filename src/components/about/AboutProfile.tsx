@@ -11,16 +11,14 @@ export function AboutProfile() {
     <section className="about-profile about-profile-distinct">
       <div className="about-copy">
         <p className="eyebrow">ABOUT ME</p>
-        <h1>Learn while implementing.</h1>
+        <h1>Building useful web systems and AI workflows.</h1>
         <div className="about-text">
           <p>
-            Saya adalah pelajar jurusan Pengembangan Perangkat Lunak dan Gim yang memiliki minat dalam pengembangan
-            website dan aplikasi.
+            Saya adalah pelajar PPLG yang fokus membangun website modern, sistem backend, dan automasi berbasis AI.
           </p>
           <p>
-            Saya berfokus pada pembuatan website yang responsif, memiliki tampilan modern, serta memberikan pengalaman
-            pengguna yang nyaman. Saat ini saya terus mengembangkan kemampuan di bidang frontend, backend, database, dan
-            software development.
+            Saya terbiasa menggunakan React, TypeScript, PHP, Node.js, SQL, Python, dan n8n untuk membuat project yang
+            fungsional, mudah digunakan, dan punya alur kerja yang jelas.
           </p>
         </div>
         <blockquote>"Turning ideas into clean, modern, and meaningful digital experiences."</blockquote>

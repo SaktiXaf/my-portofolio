@@ -4,8 +4,8 @@ export function PortfolioHeader() {
   return (
     <SectionTitle
       centered
-      title="Portfolio Showcase"
-      description="Explore my journey through projects, technical expertise, and additional skills."
+      title="Projects"
+      description="Project nyata yang menunjukkan problem yang diselesaikan, teknologi yang dipakai, fitur utama, dan hasil akhirnya."
     />
   );
 }

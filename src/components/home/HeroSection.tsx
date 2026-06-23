@@ -12,13 +12,13 @@ export function HeroSection() {
         <p className="hero-description">{profile.description}</p>
         <div className="hero-actions">
           <Button to="/#portfolio-projects">
-            Explore Portfolio <ArrowRight size={18} />
+            View Projects <ArrowRight size={18} />
           </Button>
-          <Button to="/#contact" variant="secondary">
-            Contact Me
-          </Button>
-          <a className="button button-ghost" href={profile.cv} download>
-            <Download size={18} /> CV
+          <a className="button button-secondary" href={profile.cv} download>
+            <Download size={18} /> Download CV
+          </a>
+          <a className="button button-ghost" href="https://github.com/SaktiXaf?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <Github size={18} /> GitHub Profile
           </a>
         </div>
         <div className="hero-socials" aria-label="Highlighted social links">

@@ -8,6 +8,7 @@ import { ContactForm } from "../../components/contact/ContactForm";
 import { SocialLinks } from "../../components/contact/SocialLinks";
 import { HeroSection } from "../../components/home/HeroSection";
 import { SummaryCards } from "../../components/home/SummaryCards";
+import { WhatIDoSection } from "../../components/home/WhatIDoSection";
 import { PageContainer } from "../../components/layout/PageContainer";
 import { OrderSection } from "../../components/order/OrderSection";
 import { PortfolioHeader } from "../../components/portfolio/PortfolioHeader";
@@ -93,12 +94,16 @@ export function HomePage() {
 
   return (
     <PageContainer>
-      <Seo title="Sakti Maximillian Selginov | IT Engineer & Web Developer" description={profile.description} />
+      <Seo
+        title="Sakti Maximillian Selginov | Web Developer & AI Builder"
+        description="Portfolio of Sakti Maximillian Selginov, a Web Developer and AI Builder focused on React, TypeScript, PHP, Node.js, SQL, Python, and n8n."
+      />
       <ScrollEffects />
 
       <ScrollSection id="home" className="one-page-section intro-section">
         <HeroSection />
         <SummaryCards />
+        <WhatIDoSection />
       </ScrollSection>
 
       <ScrollSection id="about" className="one-page-section about-page-section">
@@ -124,7 +129,7 @@ export function HomePage() {
         <div className="container contact-page">
           <SectionTitle
             title="Contact Me"
-            description="Jika ada pertanyaan atau mau order langsung saja kontak saya."
+            description="Punya ide project, butuh website, atau ingin diskusi soal AI automation? Hubungi saya lewat form di bawah."
           />
           <div className="contact-grid">
             <SocialLinks />

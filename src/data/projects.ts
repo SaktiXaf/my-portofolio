@@ -7,6 +7,8 @@ export const projects: Project[] = [
     title: "GitHub Repository Projects",
     shortDescription:
       "Kumpulan project publik di GitHub, mulai dari AI assistant, website PHP, aplikasi tracking, rental mobil, restoran, portofolio, sampai perpustakaan.",
+    problemSolved:
+      "Mendokumentasikan proses belajar dan eksperimen lintas project agar recruiter atau collaborator bisa melihat kemampuan teknis secara langsung.",
     fullDescription:
       "GitHub Repository Projects merangkum project-project publik dari akun GitHub SaktiXaf. Di dalamnya terdapat eksperimen AI assistant dengan voice, website referensi Apple clone, project PHP seperti lelang, company profile, restoran, perpustakaan, serta aplikasi seperti Velora dan Rental-mobil. Kumpulan repo ini menunjukkan proses belajar dan eksplorasi lintas bahasa, termasuk Python, PHP, TypeScript, SCSS, dan JavaScript.",
     thumbnail: "/images/projects/github-projects-preview.svg",
@@ -92,6 +94,8 @@ export const projects: Project[] = [
     title: "ViewSewa.id",
     shortDescription:
       "Website publik untuk layanan sewa kamera, lensa, perlengkapan fotografi/videografi, iPhone, dan motor.",
+    problemSolved:
+      "Membantu calon customer melihat layanan rental, katalog, cabang, dan jalur kontak tanpa harus bertanya manual dari awal.",
     fullDescription:
       "ViewSewa.id adalah website publik untuk layanan rental kamera, lensa, peralatan fotografi/videografi, iPhone, dan motor. Website ini membantu pengunjung melihat layanan yang tersedia, membuka katalog, menemukan informasi cabang, serta menghubungi tim melalui WhatsApp dan Instagram. Proyek ini berfokus pada tampilan yang responsif, informasi yang mudah dipindai, dan akses cepat menuju kontak layanan.",
     thumbnail: "/images/projects/viewsewa-preview.png",
@@ -119,6 +123,8 @@ export const projects: Project[] = [
     title: "AI Assistant with Voice",
     shortDescription:
       "Personal voice AI assistant desktop untuk Windows dengan perintah suara, respons TTS, command parser, dan aksi komputer lokal.",
+    problemSolved:
+      "Membantu menjalankan perintah komputer lokal lewat suara atau teks agar aktivitas harian lebih cepat dan otomatis.",
     fullDescription:
       "AI Assistant with Voice adalah MVP personal voice assistant desktop berbasis Python untuk Windows. Assistant ini dapat menerima perintah suara atau teks, memahami intent sederhana, memberi respons suara offline, membuka aplikasi dan website, melakukan pencarian, membuat catatan lokal, mengetik ke window aktif, membaca waktu, serta mencatat log aktivitas. Project ini juga mendukung Gemini parser sebagai fallback untuk command natural language dan safety confirmation untuk aksi sensitif.",
     thumbnail: "/images/projects/ai-assistant-preview.svg",

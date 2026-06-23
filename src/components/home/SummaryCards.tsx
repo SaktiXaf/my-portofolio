@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Layers3, ShoppingBag, Sparkles } from "lucide-react";
+import { ArrowUpRight, BrainCircuit, Code2, Layers3, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import { skills } from "../../data/skills";
@@ -7,28 +7,28 @@ import { Card } from "../ui/Card";
 
 const summary = [
   {
-    label: "Total Projects",
-    value: projects.length,
+    label: "Projects",
+    value: `${projects.length}+`,
     href: "/#portfolio-projects",
     icon: Layers3,
   },
   {
     label: "Tech Stack",
-    value: techStacks.length,
+    value: `${techStacks.length}+`,
     href: "/#portfolio-tech-stack",
     icon: Code2,
   },
   {
-    label: "Completed Works",
-    value: projects.filter((project) => project.status === "completed").length + skills.length,
+    label: "Skills",
+    value: `${skills.length}+`,
     href: "/#portfolio-skills",
     icon: Sparkles,
   },
   {
-    label: "Order Packages",
-    value: 4,
-    href: "/#order",
-    icon: ShoppingBag,
+    label: "Year Learning",
+    value: "1+",
+    href: "/#about",
+    icon: BrainCircuit,
   },
 ];
 

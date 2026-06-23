@@ -21,6 +21,7 @@ export interface Project {
   slug: string;
   title: string;
   shortDescription: string;
+  problemSolved: string;
   fullDescription: string;
   thumbnail: string;
   previewImage: string;
