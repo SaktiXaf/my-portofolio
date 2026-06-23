@@ -121,7 +121,7 @@ export function HomePage() {
         </div>
       </ScrollSection>
 
-      <ScrollSection id="order" className="one-page-section order-page-section">
+      <ScrollSection id="services" className="one-page-section order-page-section">
         <OrderSection />
       </ScrollSection>
 

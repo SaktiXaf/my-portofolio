@@ -70,7 +70,7 @@ const faqs = [
       "Estimasi umum: Basic 3-7 hari, Business 1-2 minggu, Professional 2-4 minggu, dan Full Sistem mulai 4 minggu. Timeline final mengikuti jumlah fitur dan kesiapan materi.",
   },
   {
-    question: "Apa saja yang perlu disiapkan sebelum order?",
+    question: "Apa saja yang perlu disiapkan sebelum mulai project?",
     answer:
       "Biasanya dibutuhkan brief singkat, logo jika ada, warna brand, daftar halaman, teks konten, gambar produk atau bisnis, serta contoh referensi website yang disukai.",
   },
@@ -94,7 +94,7 @@ export function OrderSection() {
     <div className="container order-page">
       <SectionTitle
         centered
-        title="Order Website"
+        title="Services & Packages"
         description="Pilih paket yang paling dekat dengan kebutuhanmu. Setiap paket bisa disesuaikan lagi setelah brief dan scope proyek jelas."
       />
 
@@ -148,7 +148,7 @@ export function OrderSection() {
                 onClick={(event) => event.stopPropagation()}
                 onKeyDown={(event) => event.stopPropagation()}
               >
-                Order Paket
+                Discuss Package
               </Button>
             </Card>
           </motion.div>

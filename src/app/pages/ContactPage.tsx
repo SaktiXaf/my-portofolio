@@ -14,7 +14,7 @@ export function ContactPage() {
       <section className="container contact-page">
         <SectionTitle
           title="Contact Me"
-          description="Jika ada pertanyaan atau mau order langsung saja kontak saya."
+          description="Punya ide project, butuh website, atau ingin diskusi soal AI automation? Hubungi saya lewat form di bawah."
         />
         <div className="contact-grid">
           <SocialLinks />

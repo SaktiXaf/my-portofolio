@@ -10,7 +10,8 @@ export function AppRoutes() {
       <Route path="/about" element={<Navigate to="/#about" replace />} />
       <Route path="/portfolio" element={<Navigate to="/#portfolio-projects" replace />} />
       <Route path="/portfolio/project/:slug" element={<ProjectDetailPage />} />
-      <Route path="/order" element={<Navigate to="/#order" replace />} />
+      <Route path="/order" element={<Navigate to="/#services" replace />} />
+      <Route path="/services" element={<Navigate to="/#services" replace />} />
       <Route path="/contact" element={<Navigate to="/#contact" replace />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

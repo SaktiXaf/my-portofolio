@@ -7,7 +7,7 @@ const links = [
   { label: "Home", href: "/#home", id: "home" },
   { label: "About", href: "/#about", id: "about" },
   { label: "Portfolio", href: "/#portfolio", id: "portfolio" },
-  { label: "Order", href: "/#order", id: "order" },
+  { label: "Services", href: "/#services", id: "services" },
   { label: "Contact", href: "/#contact", id: "contact" },
 ];
 
@@ -101,7 +101,10 @@ export function Navbar() {
               to={link.href}
               className={cx("mobile-nav-link", activeSection === link.id && "active")}
               aria-current={activeSection === link.id ? "page" : undefined}
-              onClick={() => handleNavClick(link.id)}
+              onClick={() => {
+                setOpen(false);
+                handleNavClick(link.id);
+              }}
             >
               {link.label}
             </Link>
