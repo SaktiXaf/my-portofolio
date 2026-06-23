@@ -622,6 +622,7 @@ h3 {
   border-radius: 16px;
   color: var(--accent-highlight);
   background: rgba(255, 255, 255, 0.04);
+  transition: transform 220ms ease;
 }
 
 .skill-icon img {
@@ -942,6 +943,10 @@ blockquote {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   justify-items: stretch;
+}
+
+.project-carousel-hint {
+  display: none;
 }
 
 .project-card {
@@ -1349,6 +1354,10 @@ blockquote {
   padding: 22px;
 }
 
+.pricing-card-shell {
+  min-width: 0;
+}
+
 .pricing-card.featured {
   border-color: rgba(139, 92, 246, 0.55);
   background:
@@ -1533,6 +1542,15 @@ blockquote {
   padding: 22px;
 }
 
+.contact-form-toggle {
+  display: none;
+}
+
+.contact-form-body {
+  display: grid;
+  gap: 18px;
+}
+
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1675,23 +1693,35 @@ textarea:focus {
 }
 
 @media (max-width: 767px) {
+  body {
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.14), transparent 18rem),
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: auto, 28px 28px, 28px 28px;
+  }
+
   .container {
-    padding: 0 16px;
+    padding: 0 18px;
   }
 
   .one-page-section {
     min-height: auto;
-    scroll-margin-top: 92px;
-    padding: 24px 0 68px;
+    scroll-margin-top: 86px;
+    padding: 18px 0 42px;
+  }
+
+  .contact-page-section {
+    padding-bottom: 22px;
   }
 
   .intro-section {
-    min-height: calc(100svh - 98px);
+    min-height: calc(100svh - 88px);
   }
 
   .site-header {
-    top: 10px;
-    padding: 0 12px;
+    top: 8px;
+    padding: 0 10px;
   }
 
   .desktop-nav {
@@ -1703,22 +1733,73 @@ textarea:focus {
     display: grid;
   }
 
+  .navbar,
+  .mobile-nav {
+    width: 100%;
+  }
+
+  .navbar {
+    min-height: 56px;
+    padding: 7px 8px 7px 17px;
+    border-radius: 22px;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+  }
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .mobile-nav-link {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+  }
+
   .page-shell {
-    padding-top: 98px;
+    padding-top: 88px;
   }
 
   .hero-section {
-    gap: 22px;
-    padding-top: 18px;
+    gap: 18px;
+    padding-top: 8px;
   }
 
   .hero-content h1 {
-    font-size: clamp(2.8rem, 15vw, 4rem);
+    max-width: 11ch;
+    font-size: 3.05rem;
+    line-height: 0.96;
+    text-wrap: balance;
+  }
+
+  .hero-content h2 {
+    margin-top: 14px;
+    font-size: 1.28rem;
+    line-height: 1.28;
+  }
+
+  .hero-description {
+    margin-top: 18px;
+    font-size: 0.98rem;
+    line-height: 1.72;
   }
 
   .hero-actions,
   .action-row {
+    gap: 10px;
     align-items: stretch;
+    margin-top: 22px;
   }
 
   .hero-actions .button,
@@ -1727,24 +1808,208 @@ textarea:focus {
     width: 100%;
   }
 
+  .button {
+    min-height: 46px;
+    padding: 0 16px;
+  }
+
+  .hero-socials {
+    margin-top: 18px;
+  }
+
   .hero-visual,
   .about-portrait {
-    min-height: 300px;
+    min-height: 255px;
+  }
+
+  .hero-visual img,
+  .about-portrait img {
+    width: min(74%, 260px);
+  }
+
+  .profile-glow,
+  .about-portrait::before {
+    width: min(78%, 280px);
+  }
+
+  .summary-section {
+    margin-top: 34px;
   }
 
   .summary-grid,
-  .about-cards,
   .portfolio-grid,
   .pricing-grid,
   .repo-projects-grid,
-  .skills-grid,
   .field-grid,
   .project-stats {
     grid-template-columns: 1fr;
   }
 
+  .summary-grid,
+  .about-cards,
+  .portfolio-grid,
+  .repo-projects-grid,
+  .skills-grid,
+  .contact-info,
+  .contact-grid,
+  .project-detail-side,
+  .faq-list {
+    gap: 14px;
+  }
+
+  .card {
+    border-radius: 18px;
+  }
+
+  .summary-card {
+    min-height: 124px;
+    padding: 18px;
+  }
+
+  .summary-icon,
+  .skill-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .summary-value {
+    margin-top: 14px;
+    font-size: 2.1rem;
+  }
+
+  .summary-arrow {
+    top: 18px;
+    right: 18px;
+  }
+
+  .about-page,
+  .portfolio-page,
+  .contact-page,
+  .project-detail-page,
+  .not-found-page {
+    padding-top: 12px;
+  }
+
+  .about-profile {
+    gap: 26px;
+  }
+
+  .about-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .about-cards .info-card {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    align-content: start;
+    gap: 8px;
+    padding: 14px;
+    cursor: pointer;
+    transition:
+      aspect-ratio 260ms ease,
+      min-height 260ms ease,
+      padding 220ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .about-cards .info-card h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 0.96rem;
+    line-height: 1.18;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    transition: font-size 220ms ease, line-height 220ms ease;
+  }
+
+  .about-cards .info-card p {
+    font-size: 0.68rem;
+    line-height: 1.2;
+    transition: color 180ms ease;
+  }
+
+  .about-cards .info-card svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 220ms ease;
+  }
+
+  .about-cards .info-card-description {
+    max-height: 0;
+    transform: translateY(-4px);
+    overflow: hidden;
+    opacity: 0;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    transition:
+      max-height 320ms ease,
+      opacity 220ms ease,
+      transform 260ms ease;
+  }
+
+  .about-cards .info-card.expanded {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .about-cards .info-card.expanded svg {
+    transform: scale(1.08);
+  }
+
+  .about-cards .info-card.expanded h3 {
+    display: block;
+    overflow: visible;
+  }
+
+  .about-cards .info-card.expanded .info-card-description {
+    max-height: 120px;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .about-copy h1,
+  .section-title h1,
+  .project-detail-main h1,
+  .not-found-page h1 {
+    font-size: 2.25rem;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .section-title p,
+  .about-text,
+  .project-detail-main > p {
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  blockquote {
+    margin-top: 22px;
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .about-workbench {
+    gap: 14px;
+  }
+
   .about-focus-card {
-    padding: 24px;
+    padding: 22px;
+  }
+
+  .about-focus-card h2 {
+    font-size: 1.6rem;
+    line-height: 1.12;
+  }
+
+  .about-focus-card p {
+    margin-top: 22px;
   }
 
   .about-focus-list,
@@ -1753,21 +2018,487 @@ textarea:focus {
   }
 
   .portfolio-tabs-wrap {
-    margin-right: -16px;
-    margin-left: -16px;
-    padding: 0 16px;
+    margin: 26px 0 0;
+    overflow: visible;
+    padding: 0;
   }
 
   .portfolio-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
     margin: 0;
+    border-radius: 20px;
+    padding: 6px;
+  }
+
+  .portfolio-tab {
+    min-height: 44px;
+    padding: 0 10px;
+    font-size: 0.83rem;
+    line-height: 1.2;
+  }
+
+  .portfolio-content {
+    margin-top: 26px;
+  }
+
+  .project-grid {
+    position: relative;
+    display: flex;
+    gap: 14px;
+    margin-right: -18px;
+    overflow-x: auto;
+    padding: 0 18px 8px 0;
+    cursor: grab;
+    scroll-padding-left: 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .project-grid:active {
+    cursor: grabbing;
+  }
+
+  .project-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-grid .project-card {
+    flex: 0 0 calc(100% - 34px);
+    scroll-snap-align: start;
+  }
+
+  .project-carousel-hint {
+    position: absolute;
+    top: 12px;
+    right: 28px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 7px 10px;
+    color: var(--text-primary);
+    background: rgba(10, 10, 10, 0.82);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34);
+    font-size: 0.74rem;
+    font-weight: 800;
+    pointer-events: none;
+  }
+
+  .project-carousel-hint::after {
+    content: ">";
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  .filter-pills {
+    justify-content: flex-start;
+    margin-bottom: 22px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    min-height: 38px;
+    flex: 0 0 auto;
+    padding: 0 14px;
   }
 
   .tech-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tech-card {
+    min-height: 118px;
+    padding: 16px 12px;
+  }
+
+  .project-card {
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .project-card-body,
+  .info-card,
+  .contact-card,
+  .features-card,
+  .pricing-card {
+    padding: 18px;
+  }
+
+  .contact-form {
+    gap: 0;
+    padding: 14px;
+  }
+
+  .contact-form-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    color: var(--text-primary);
+    background: transparent;
+    font-weight: 800;
+  }
+
+  .contact-form-toggle span {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .contact-form-toggle svg:last-child {
+    color: var(--text-secondary);
+    transition: transform 240ms ease, color 180ms ease;
+  }
+
+  .contact-form.expanded .contact-form-toggle svg:last-child {
+    color: var(--accent-highlight);
+    transform: rotate(180deg);
+  }
+
+  .contact-form-body {
+    max-height: 0;
+    transform: translateY(-6px);
+    overflow: hidden;
+    gap: 16px;
+    opacity: 0;
+    transition:
+      max-height 420ms ease,
+      opacity 240ms ease,
+      transform 280ms ease,
+      padding-top 240ms ease;
+  }
+
+  .contact-form.expanded .contact-form-body {
+    max-height: 860px;
+    transform: translateY(0);
+    padding-top: 18px;
+    opacity: 1;
+  }
+
+  .skill-card {
+    aspect-ratio: 1 / 1;
+    align-content: start;
+    gap: 8px;
+    padding: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+      aspect-ratio 260ms ease,
+      min-height 260ms ease,
+      padding 220ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .project-card-heading {
+    gap: 10px;
+  }
+
+  .project-card h3,
+  .skill-card h3,
+  .tech-card h3 {
+    font-size: 1.08rem;
+  }
+
+  .skill-card h3 {
+    font-size: 0.92rem;
+    line-height: 1.18;
+    transition: font-size 220ms ease, line-height 220ms ease;
+  }
+
+  .skill-card .badge {
+    min-height: 24px;
+    padding: 0 8px;
+    font-size: 0.68rem;
+  }
+
+  .skill-card-description {
+    max-height: 0;
+    transform: translateY(-4px);
+    overflow: hidden;
+    opacity: 0;
+    font-size: 0.78rem;
+    transition:
+      max-height 320ms ease,
+      opacity 220ms ease,
+      transform 260ms ease;
+  }
+
+  .skill-card.expanded {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .skill-card.expanded .skill-icon {
+    transform: scale(1.08);
+  }
+
+  .skill-card.expanded h3 {
+    font-size: 1.04rem;
+  }
+
+  .skill-card.expanded .skill-card-description {
+    max-height: 130px;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .project-card p,
+  .skill-card p,
+  .pricing-description,
+  .features-card ul,
+  .repo-project-card p,
+  .faq-item p {
+    line-height: 1.58;
+  }
+
+  .badge-row {
+    margin-top: 14px;
+  }
+
+  .details-link {
+    align-self: stretch;
+    justify-content: space-between;
+    padding-top: 18px;
+  }
+
+  .order-page {
+    gap: 34px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .pricing-card-shell {
+    min-width: 0;
+  }
+
+  .pricing-card-shell:has(.pricing-card.expanded) {
+    grid-column: 1 / -1;
+  }
+
+  .pricing-card {
+    min-height: 0;
+    aspect-ratio: 1 / 1.35;
+    justify-content: start;
+    gap: 8px;
+    padding: 14px;
+    cursor: pointer;
+    transition:
+      aspect-ratio 260ms ease,
+      min-height 260ms ease,
+      padding 220ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .pricing-card.expanded {
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .pricing-ribbon {
+    margin-bottom: 6px;
+    padding: 5px 8px;
+    font-size: 0.64rem;
+  }
+
+  .pricing-head {
+    gap: 6px;
+  }
+
+  .pricing-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    transition: transform 220ms ease;
+  }
+
+  .pricing-card.expanded .pricing-icon {
+    transform: scale(1.08);
+  }
+
+  .pricing-head p {
+    display: -webkit-box;
+    margin: 10px 0 0;
+    overflow: hidden;
+    font-size: 0.86rem;
+    line-height: 1.15;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .pricing-head h3 {
+    font-size: 1.28rem;
+    line-height: 1.06;
+    transition: font-size 220ms ease;
+  }
+
+  .pricing-card.expanded .pricing-head h3 {
+    font-size: 2rem;
+  }
+
+  .pricing-head span {
+    font-size: 0.72rem;
+  }
+
+  .pricing-details {
+    display: grid;
+    max-height: 0;
+    transform: translateY(-4px);
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 360ms ease,
+      opacity 220ms ease,
+      transform 280ms ease;
+  }
+
+  .pricing-card.expanded .pricing-details {
+    max-height: 560px;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .pricing-description {
+    min-height: 0;
+    margin-top: 16px;
+    font-size: 0.94rem;
+  }
+
+  .pricing-benefits {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .pricing-benefits span {
+    font-size: 0.93rem;
+  }
+
+  .order-faq {
+    gap: 22px;
+  }
+
+  .faq-item button {
+    padding: 16px 18px;
+  }
+
+  .contact-grid {
+    margin-top: 26px;
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-info .contact-card {
+    min-width: 0;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .contact-info .contact-card svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info .contact-card p {
+    font-size: 0.68rem;
+    line-height: 1.2;
+  }
+
+  .contact-info .contact-card a,
+  .contact-info .contact-card span {
+    overflow: hidden;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .connect-section {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+  }
+
+  .connect-section h2 {
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+  }
+
+  .social-card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .social-card {
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    min-width: 0;
+    padding: 13px;
+  }
+
+  .social-card > svg:first-child {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-card strong {
+    font-size: 0.9rem;
+    line-height: 1.15;
+  }
+
+  .social-card small {
+    overflow: hidden;
+    font-size: 0.72rem;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .social-card > svg:last-child {
+    display: none;
+  }
+
+  input,
+  textarea {
+    border-radius: 14px;
+    padding: 13px 14px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .footer {
+    margin-top: 22px;
+    padding: 28px 0 24px;
   }
 
   .footer-socials {
@@ -1775,7 +2506,58 @@ textarea:focus {
   }
 
   .social-card {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .project-grid {
+    margin-right: -14px;
+    padding-right: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.65rem;
+  }
+
+  .hero-content h2,
+  .section-title p {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.93rem;
+  }
+
+  .mobile-nav-link,
+  .portfolio-tab {
+    font-size: 0.8rem;
+  }
+
+  .about-copy h1,
+  .section-title h1,
+  .project-detail-main h1,
+  .not-found-page h1 {
+    font-size: 2rem;
+  }
+
+  .contact-info,
+  .social-card-list {
+    gap: 8px;
+  }
+
+  .skill-card {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    padding: 12px;
+  }
+
+  .skill-card.expanded {
+    aspect-ratio: auto;
   }
 }
 

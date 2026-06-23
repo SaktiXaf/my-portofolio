@@ -88,6 +88,7 @@ const faqs = [
 
 export function OrderSection() {
   const [activeFaq, setActiveFaq] = useState(0);
+  const [expandedPackage, setExpandedPackage] = useState<string | null>(null);
 
   return (
     <div className="container order-page">
@@ -101,31 +102,52 @@ export function OrderSection() {
         {packages.map((item, index) => (
           <motion.div
             key={item.name}
+            className="pricing-card-shell"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.45, delay: index * 0.06 }}
             whileHover={{ y: -8 }}
           >
-            <Card className={cx("pricing-card", item.featured && "featured")}>
+            <Card
+              className={cx("pricing-card", item.featured && "featured", expandedPackage === item.name && "expanded")}
+              role="button"
+              tabIndex={0}
+              aria-expanded={expandedPackage === item.name}
+              onClick={() => setExpandedPackage((current) => (current === item.name ? null : item.name))}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setExpandedPackage((current) => (current === item.name ? null : item.name));
+                }
+              }}
+            >
               {item.featured ? <span className="pricing-ribbon">Recommended</span> : null}
               <div className="pricing-head">
                 <span className="pricing-icon">
                   {item.featured ? <Sparkles size={22} /> : <ShieldCheck size={22} />}
                 </span>
                 <p>{item.name}</p>
-                <h3>{item.price}</h3>
                 <span>Mulai dari</span>
+                <h3>{item.price}</h3>
               </div>
-              <p className="pricing-description">{item.description}</p>
-              <div className="pricing-benefits">
-                {item.benefits.map((benefit) => (
-                  <span key={benefit}>
-                    <CheckCircle2 size={16} /> {benefit}
-                  </span>
-                ))}
+              <div className="pricing-details">
+                <p className="pricing-description">{item.description}</p>
+                <div className="pricing-benefits">
+                  {item.benefits.map((benefit) => (
+                    <span key={benefit}>
+                      <CheckCircle2 size={16} /> {benefit}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <Button to="/#contact" variant={item.featured ? "primary" : "secondary"} className="pricing-button">
+              <Button
+                to="/#contact"
+                variant={item.featured ? "primary" : "secondary"}
+                className="pricing-button"
+                onClick={(event) => event.stopPropagation()}
+                onKeyDown={(event) => event.stopPropagation()}
+              >
                 Order Paket
               </Button>
             </Card>

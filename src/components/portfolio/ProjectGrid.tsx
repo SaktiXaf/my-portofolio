@@ -9,6 +9,11 @@ export function ProjectGrid() {
 
   return (
     <section className="portfolio-grid project-grid" aria-label="Projects">
+      {projects.length > 1 ? (
+        <span className="project-carousel-hint" aria-hidden="true">
+          Geser
+        </span>
+      ) : null}
       {projects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}

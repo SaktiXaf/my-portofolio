@@ -1,5 +1,7 @@
 import { BookOpen, Compass, GraduationCap, MapPin } from "lucide-react";
+import { useState } from "react";
 import { profile } from "../../data/profile";
+import { cx } from "../../lib/utils";
 import { Card } from "../ui/Card";
 
 const aboutCards = [
@@ -30,16 +32,33 @@ const aboutCards = [
 ];
 
 export function AboutCards() {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
   return (
     <section className="about-cards" aria-label="Additional profile information">
       {aboutCards.map((item) => {
         const Icon = item.icon;
+        const isExpanded = expandedCard === item.title;
+
         return (
-          <Card className="info-card" key={item.title}>
+          <Card
+            className={cx("info-card", isExpanded && "expanded")}
+            key={item.title}
+            role="button"
+            tabIndex={0}
+            aria-expanded={isExpanded}
+            onClick={() => setExpandedCard((current) => (current === item.title ? null : item.title))}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                setExpandedCard((current) => (current === item.title ? null : item.title));
+              }
+            }}
+          >
             <Icon size={22} />
             <p>{item.title}</p>
             <h3>{item.value}</h3>
-            <span>{item.description}</span>
+            <span className="info-card-description">{item.description}</span>
           </Card>
         );
       })}
