@@ -14,7 +14,7 @@ export function AboutProfile() {
         <h1>Building useful web systems and AI workflows.</h1>
         <div className="about-text">
           <p>
-            Saya adalah pelajar PPLG yang fokus membangun website modern, sistem backend, dan automasi berbasis AI.
+            Saya adalah pelajar PPLG yang fokus membangun website modern, backend system, dan AI automation.
           </p>
           <p>
             Saya terbiasa menggunakan React, TypeScript, PHP, Node.js, SQL, Python, dan n8n untuk membuat project yang

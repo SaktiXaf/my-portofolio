@@ -16,6 +16,11 @@ export function SocialLinks() {
         <p>Location</p>
         <span>{profile.location}</span>
       </Card>
+      <Card className="contact-card contact-active-card">
+        <Mail size={22} />
+        <p>Active Contact</p>
+        <span>Form email, GitHub, LinkedIn, Instagram, dan TikTok tersedia.</span>
+      </Card>
       <div className="connect-section">
         <h2>Connect With Me</h2>
         <div className="social-card-list">

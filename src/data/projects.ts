@@ -6,7 +6,7 @@ export const projects: Project[] = [
     slug: "github-repository-projects",
     title: "GitHub Repository Projects",
     shortDescription:
-      "Kumpulan project publik di GitHub, mulai dari AI assistant, website PHP, aplikasi tracking, rental mobil, restoran, portofolio, sampai perpustakaan.",
+      "Kumpulan project publik untuk latihan AI assistant, website PHP, aplikasi tracking, rental, restoran, portfolio, dan sistem perpustakaan.",
     problemSolved:
       "Mendokumentasikan proses belajar dan eksperimen lintas project agar recruiter atau collaborator bisa melihat kemampuan teknis secara langsung.",
     fullDescription:
@@ -21,11 +21,11 @@ export const projects: Project[] = [
       { name: "SCSS", icon: "SCSS" },
     ],
     features: [
-      "AI assistant with voice experiment",
-      "PHP web projects and company references",
-      "Mobile tracking app exploration",
-      "Rental, restaurant, portfolio, and library projects",
-      "Public repositories for learning documentation",
+      "AI assistant dengan input suara",
+      "Website PHP untuk company profile dan bisnis",
+      "Aplikasi tracking berbasis TypeScript",
+      "Project rental, restoran, portfolio, dan perpustakaan",
+      "Repository publik sebagai dokumentasi belajar",
     ],
     repositoryUrl: "https://github.com/SaktiXaf?tab=repositories",
     status: "completed",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     slug: "viewsewa-id",
     title: "ViewSewa.id",
     shortDescription:
-      "Website publik untuk layanan sewa kamera, lensa, perlengkapan fotografi/videografi, iPhone, dan motor.",
+      "Website penyewaan kamera dengan katalog layanan, rekomendasi produk, informasi cabang, dan alur kontak cepat.",
     problemSolved:
       "Membantu calon customer melihat layanan rental, katalog, cabang, dan jalur kontak tanpa harus bertanya manual dari awal.",
     fullDescription:
@@ -107,10 +107,10 @@ export const projects: Project[] = [
       { name: "Bootstrap", icon: "BS" },
     ],
     features: [
-      "Public rental service website",
-      "Catalog and product recommendation sections",
-      "WhatsApp and Instagram contact flow",
-      "Branch information for multiple cities",
+      "Katalog layanan rental kamera dan perangkat",
+      "Rekomendasi produk untuk customer",
+      "Kontak cepat ke WhatsApp dan Instagram",
+      "Informasi cabang untuk beberapa kota",
     ],
     liveDemoUrl: "https://viewsewa.id",
     status: "completed",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     slug: "ai-assistant-with-voice",
     title: "AI Assistant with Voice",
     shortDescription:
-      "Personal voice AI assistant desktop untuk Windows dengan perintah suara, respons TTS, command parser, dan aksi komputer lokal.",
+      "Personal AI assistant desktop untuk menjalankan perintah suara, respons TTS, command parser, dan aksi komputer lokal.",
     problemSolved:
       "Membantu menjalankan perintah komputer lokal lewat suara atau teks agar aktivitas harian lebih cepat dan otomatis.",
     fullDescription:
@@ -136,11 +136,11 @@ export const projects: Project[] = [
       { name: "Gemini API", icon: "AI" },
     ],
     features: [
-      "Voice input and text command mode",
-      "Offline text-to-speech response",
-      "Rule-based command parser with Gemini fallback",
-      "Open apps, websites, search, notes, and typing actions",
-      "Wake phrase and safety confirmation flow",
+      "Input suara dan mode perintah teks",
+      "Respons text-to-speech offline",
+      "Command parser dengan fallback Gemini",
+      "Aksi buka aplikasi, website, search, catatan, dan typing",
+      "Wake phrase dan konfirmasi untuk aksi sensitif",
     ],
     repositoryUrl: "https://github.com/SaktiXaf/ai-assistant-w-voice",
     status: "completed",
